@@ -7,10 +7,11 @@ export class MongoDb {
 	 * @param {string} uri 
 	 */
 	constructor(uri) {
+		console.log('UR~L', uri);
 		if (!uri) {
 			return;
 		}
-
+		
 		this.client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
 	}
 
